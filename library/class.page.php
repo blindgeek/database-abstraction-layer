@@ -74,22 +74,22 @@ echo '</body>', "\n";
 echo '</html>';
 }
 
-public function display_title()
+public function displayTitle()
 {
 echo '<title>', $this->title, ' | ', $this->website_name, '</title>', "\n";
 }
 
-public function display_keywords()
+public function displayKeywords()
 {
 echo '<meta name="keywords" content="', $this->keywords, '">', "\n";
 }
 
-public function display_description()
+public function displayDescription()
 {
 echo '<meta name="description" content="', $this->description, '">', "\n";
 }
 
-public function display_styles()
+public function displayStyles()
 {
 ?>
 
@@ -110,7 +110,7 @@ a, a:hover, a:visited, a:active  {color:#333333; }
 <?php
 }
 
-public function display_header()
+public function displayHeader()
 {
 ?>
 
@@ -130,7 +130,7 @@ echo '</nav>', "\n";
 echo '</header>', "\n";
 }
 
-public function display_menu($menus)
+public function displayMenu($menus)
 {
 // Calculate menu size
 $width = 100/count($menus);
@@ -140,7 +140,7 @@ $this->display_menu_buttons($width, $name, $url, !$this->is_url_current_page($ur
 }
 }
 
-public function is_url_current_page($url)
+public function isUrlCurrentPage($url)
 {
 if (strpos($_SERVER["PHP_SELF"], $url) === false) {
 return false;
@@ -149,7 +149,7 @@ return true;
 }
 }
 
-public function display_menu_buttons($width, $name, $url, $active = true)
+public function displayMenuButtons($width, $name, $url, $active = true)
 {
 if ($active) {
 echo '<li id="menu" style="width:', $width, '%">';
@@ -162,7 +162,7 @@ echo '</li>';
 }
 }
 
-public function display_footer()
+public function displayFooter()
 {
 ?>
 

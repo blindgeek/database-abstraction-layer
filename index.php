@@ -3,12 +3,13 @@
 /**
 *
 * @file index.php
-* We have to instanciate the page class
+* This is the index page for the database website
+* We have to instanciate the Page class
 * to be used in creating and displaying the page
 */
 
 // Fetch the autoloader
-require_once 'config/autoload.php';
+require_once 'autoload.php';
 
 $page = new Page('Database Form'); // Instanciate the Page class
 
